@@ -8,7 +8,7 @@ class MainKtTest {
     fun updateExisting() {
         val service = WallService
         val post1 = Post(
-            123,
+            1,
             12345689,
             12345689,
             111111,
@@ -34,7 +34,7 @@ class MainKtTest {
             1
         )
         val post2 = Post(
-            234,
+            2,
             12345665,
             12345665,
             111111,
@@ -60,7 +60,7 @@ class MainKtTest {
             1
         )
         val post3 = Post(
-            789,
+            3,
             12345670,
             12345555,
             111111,
@@ -111,7 +111,8 @@ class MainKtTest {
             Donut(true, 99999999,"Update", true, "Update"),
             1
         )
-
+        service.add(post1)
+        service.add(post2)
         val result = service.update(update)
         assertTrue(result)
     }
@@ -122,7 +123,7 @@ class MainKtTest {
         val service = WallService
         // заполняем несколькими постами
         val post1 = Post(
-            123,
+            1,
             12345689,
             12345689,
             111111,
@@ -148,7 +149,7 @@ class MainKtTest {
             1
         )
         val post2 = Post(
-            234,
+            2,
             12345665,
             12345665,
             111111,
@@ -200,7 +201,7 @@ class MainKtTest {
             1
         )
         val update = Post(
-            2,
+            256,
             99999999,
             99999999,
             99999999,
@@ -226,10 +227,9 @@ class MainKtTest {
             1
         )
 
-        // выполняем целевое действие
+        service.add(post1)
+        service.add(post2)
         val result = service.update(update)
-
-        // проверяем результат (используйте assertTrue или assertFalse)
         assertFalse(result)
     }
 

@@ -94,8 +94,6 @@ object WallService {
 
 }
 
-
-
 fun main(args: Array<String>) {
 
     val post1 = Post(
@@ -211,8 +209,4 @@ fun main(args: Array<String>) {
 
     if (WallService.update(post4)) WallService.print()
     if (WallService.update(post3)) WallService.print()
-
-
-
-
 }
