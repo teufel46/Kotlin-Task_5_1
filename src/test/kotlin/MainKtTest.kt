@@ -236,7 +236,7 @@ class MainKtTest {
     @Test
     fun add() {
         val service = WallService
-        service.add(Post(
+        val postNew = service.add(Post(
             123,
             12345689,
             12345689,
@@ -262,6 +262,7 @@ class MainKtTest {
             Donut(true, 223,"placeholder", true, "all"),
             1
         ))
-        assertTrue(service.posts[0].id > 0)
+
+        assertTrue(postNew.id > 0)
     }
 }
