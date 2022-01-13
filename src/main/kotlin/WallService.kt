@@ -3,8 +3,8 @@ object WallService {
     var nextId: Long = 1
 
     fun add(post: Post) : Post {
-        post.id = nextId
-        posts += post
+        val postNew = post.copy(id = nextId)
+        posts += postNew
         nextId += 1
         return posts.last()
     }
